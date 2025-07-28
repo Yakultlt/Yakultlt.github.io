@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		body{
+			background: url(Estados/imgp/cdmx2.webp);
+			background-position: top;
+			background-size: cover; ;
+			background-repeat: no-repeat;
+
+		}
+		label{
+			color: black;
+			width: 100%;
+			font-size: 25px;
+			font-weight: ;
+			margin-bottom: 20px;
+		}
+		select{
+			width: 100%;
+			height: 30px;
+			font-size: 25px;
+			border-radius: 10px
+			background:rgba(0,0,0, 0.6);
+			color:;
+			margin-bottom: 20px;
+
+		}
+		.etiqueta{
+			width: 100%;
+			height:50px;
+			border-radius:2px;
+			background: rgba(0,0,0, 0.6);
+			color: white;
+			font-size: 25px;
+			padding-left: 4px; 
+			margin-bottom: 20px
+		}
+		.contenedor{
+			width: 700px;
+			height: 700px;
+			background: #fff;
+			border-radius: 0px;
+			padding: 30px;
+			margin: 100px auto;
+			box-shadow: 0px 15px 50px rgba(0, 0, 0, 2.0);
+			background: rgba( 255, 255, 255, 0.15 );
+           box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+           backdrop-filter: blur( 5px );
+  -        webkit-backdrop-filter: blur( 18px );
+  			color: white;
+		}
+		/*.circle{
+			width: 200px;
+			height: 200px;
+			background :url(img/Vania.webp) ;
+
+			background-size: cover;
+			background-position: center;
+			border-radius: 50%;
+			float: left;
+			margin: 60px 30px 30px 0px;
+			shape-outside: circle();*/
+		}
+		h1{
+			margin-bottom: 20px;
+			font-weight: normal;
+			font-size: 40px;
+
+		}
+		p{
+			line-height: 26px;
+		}
+
+		button {
+			width: 150px;
+			height: 50px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: 1px solid rgb(61, 106, 255);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background: transparent;
+  color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  background: rgb(61, 106, 255);
+  box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+button:hover::before {
+  -webkit-animation: sh02 0.5s 0s linear;
+  -moz-animation: sh02 0.5s 0s linear;
+  animation: sh02 0.5s 0s linear;
+}
+
+button::before {
+  content: '';
+  display: block;
+  width: 0px;
+  height: 86%;
+  position: absolute;
+  top: 7%;
+  left: 0%;
+  opacity: 0;
+  background: #fff;
+  box-shadow: 0 0 50px 30px #fff;
+  -webkit-transform: skewX(-20deg);
+  -moz-transform: skewX(-20deg);
+  -ms-transform: skewX(-20deg);
+  -o-transform: skewX(-20deg);
+  transform: skewX(-20deg);
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
+  }
+}
+
+button:active {
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: box-shadow 0.2s ease-in;
+  -moz-transition: box-shadow 0.2s ease-in;
+  transition: box-shadow 0.2s ease-in;
+}
+
+.bot{
+	background: skyblue;
+	</style>
+}
+</head>
+<body>
+	<div class="contenedor">
+		<form action="reservacion.html" method="post">
+		<br>
+		<label>Nombre Completo</label> <br>
+		<input class="etiqueta" type="text" name="cantidad"><br>
+		<label>Numero de Telefono</label><br>
+		<input class="etiqueta" type="text" name="precio">
+		<label for="">Sucursal a Seleccionar</label><br>
+		  <select class="etiqueta" name="" id="">
+		  	<option></option>
+		  <option value="1">Norte</option>
+		  <option value="3">Centro</option>
+		  <option value="1">Sur</option>
+
+</select>
+		<label for="">Metodo de Pago</label><br>
+		  <select class="etiqueta" name="" id="">
+		  	<option></option>
+		  <option value="1">Tarjeta de Credito</option>
+		  <option value="3">Tarjeta de debito</option>
+		</select>
+		<label>fecha y hora</label><br>
+		  <input class="etiqueta" type="datetime-local">
+
+		<center> 
+		<button value="pedir">Pedir</button>
+	</center>
+	</form>
+		</div>
+	
+
+
+</body>
+</html>

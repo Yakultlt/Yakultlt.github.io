@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sucursales</title>
+	  <link rel="stylesheet" type="text/css" href="Fonts/css/EL.css">
+
+		<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		.menu{
+  position: absolute;
+  top: 0;
+  margin: 0px;
+  padding: 0px;
+  width: 100vw;
+  height: 100px;
+  background-color: #222;
+} 
+
+.btnm {
+ position: relative;
+ top: 20%;
+ left: 30% ;
+ font-size: 20px;
+ text-transform: uppercase;
+ text-decoration: none;
+ padding: 1em 2.5em;
+ margin-right: 35px;
+ display: inline-block;
+ border-radius: 6em;
+ transition: all .2s;
+ border: none;
+ font-family: inherit;
+ font-weight: 500;
+ color: black;
+ background-color: #03765a;
+ float: center;
+}
+.btnm:hover {
+ transform: translateY(-3px);
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btnm:active {
+ transform: translateY(-1px);
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btnm::after {
+ content: "";
+ display: inline-block;
+ height: 100%;
+ width: 100%;
+ border-radius: 100px;
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: -1;
+ transition: all .4s;
+}
+.btnm::after {
+ background-color: #03765a;
+}
+
+.btnm:hover::after {
+ transform: scaleX(1.4) scaleY(1.6);
+ opacity: 0;
+}
+
+/* === 1er texo ===*/
+span.span {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  left: 15%;
+  top: 20%;
+
+}
+
+/* estilo de boton */
+.span {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: 'Arial';
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* hover del texto */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* aimacion */
+.span:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+		/*barra de navegacion fin :D*/
+
+		body{
+			background: black;
+			background-blend-mode: multiply;
+			/*background-position: center;*/
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.contenedor{
+			width: 400px;
+			background: #fff;
+			border-radius: 10px;
+			padding: 30px;
+			margin: 300px 50px;
+            box-shadow: 0px 0px 14px rgba(195, 189, 188, 2.0);
+		}
+		.circle{
+			width: 350px;
+			height: 250px;
+			background :url(imgp/nue.jpg) ;
+			background-size: cover;
+			background-position: center;
+			/*border-radius: 50%;*/
+			/*float: left;*/
+			margin: 20px 30px 30px 0px;
+			/*shape-outside: circle();*/
+
+		}
+		h1{
+			margin-bottom: 20px;
+			font-weight: normal;
+			font-size: 40px;
+			font-family: 'MAXR';
+		}
+
+		p{
+			line-height: 26px;
+			font-family: 'MAXR';
+		}
+
+		}
+
+
+		
+		.contenedor2{
+			width: 400px;
+			background: #fff;
+			border-radius: 10px;
+			padding: 30px;
+			margin: 100px 50px;
+			box-shadow: 0px 15px 70px rgba(195, 189, 188, 2.0);*/
+		}
+		.circle1{
+			width: 345px;
+			height: 250px;
+			background :url(imgp/ciudaddemexico2.avif) ;
+			background-size: cover;
+			background-position: center;
+			/*border-radius: 50%;*/
+			/*float: left;*/
+			margin: 20px 30px 30px 0px;
+			/*shape-outside: circle();*/
+		}
+		h1{
+			margin-bottom: 20px;
+			font-weight: normal;
+			font-size: 40px;
+
+		}
+		p{
+			line-height: 26px;
+		}
+		
+
+
+		.contenedor3{
+			width: 400px;
+			
+			background: #fff;
+			border-radius: 10px;
+			padding: 30px;
+			margin: 100px 50px;
+			box-shadow: 0px 15px 70px rgba(195, 189, 188, 2.0);*/
+		}
+		.circle2{
+			width: 345px;
+			height: 250px;
+			background :url(imgp/merida2.jpg) ;
+			background-size: cover;
+			background-position: center;
+			/*border-radius: 50%;*/
+			/*float: left;*/
+			margin: 20px 30px 30px 0px;
+			/*shape-outside: circle();*/
+		}
+		h1{
+			margin-bottom: 20px;
+			font-weight: normal;
+			font-size: 40px;
+			
+
+		}
+		p{
+			line-height: 26px;
+		}
+		body{
+			display: flex;
+/*			justify-content: center;*/
+/*			/align-items: center;*/
+			background-position:linear-gradient(#4ba9e9 0, #4ba9e9 50%,#fff 50%,#fff 100%)
+			min-height:100vh;
+		}
+		.contenedor{
+			/*position: relative;
+			width: 300px;
+			height: 360px;
+			background:#0000;
+			display: flex;*/.
+
+			box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+			/*overflow: hidden;*/
+			transition: 0.5s ease-in-out;
+			list-style: none;
+		}
+		.contenedor:hover{
+			
+			width: 1800px;
+			
+
+		}
+
+		.contenedor .circle{
+			position: relative;
+			min-width: 300px;
+			max-width: 1000px;
+			
+		}
+
+		}
+		 .alas{
+			display: none;
+			font-family: 'MAXR';
+		}
+		.alas{
+			visibility: hidden;
+		}
+		@keyframes fade-in {
+        from {
+        opacity: 0; 
+        }
+        to {
+         opacity: 1;
+ 		 }
+		}
+
+		.contenedor:hover .alas{
+			visibility: visible;
+			  animation: fade-in 1.5s ease-out;
+		}
+		.contenedor:hover .pro{
+			visibility: visible;
+			  animation: fade-in 1.5s ease-out;
+		}
+		.contenedor {
+    	margin-bottom: 20px;
+		}
+
+		.circle, h1, h2 {
+   
+    		margin-bottom: 10px;
+			}
+
+			.alas {
+    
+   			 margin-top: 20px;
+			}
+			.alas {
+			margin: -415px;
+    		float: right; 
+    		width: 58%; 
+   		 	margin-left: 20px; 
+    		margin-right: 160px;
+    		font-family: 'MAXR';
+    		font-size: 18px;
+		}
+		img{
+			height: 40px;
+			width: 100px;
+			margin-top: 7px;
+		}
+		.pro{
+			float: right;
+			height: 250px;
+			width: 300px;
+			margin: -250px -100px;
+			border-radius: 15px;
+
+
+			
+		}
+		@font-face{
+			font-family: mifuente;
+			src:url(texto/AUGUSTUS.TTF);
+
+		}
+		
+		.ren{
+			letter-spacing: 20px;
+			margin-left: 25%;
+
+			color: white;
+			margin-top:10px;
+			font-family: mifuente;
+			font-size: 50px;
+		}
+
+
+	</style>
+		
+<body>
+
+<div class="menu">
+
+    <span class="span" data-text="Awesome">
+         <span >&nbsp;REN&nbsp;</span>
+         <span aria-hidden="true" class="hover-text">&nbsp;REN&nbsp;</span>
+    </span>
+    
+
+    <button class="btnm"><a href="Inicio.html" class="RO">Principal</a></button>
+    <button class="btnm"><a href="sucursales.html" class="RO">Sucursales</a></button>
+    <button class="btnm"><a href="Productos.html" class="RO">Productos</a></button>
+    <button class="btnm"><a href="Nosotros.html" class="RO">Nosotros</a></button>
+    <button class="btnm"><a href="Contacto.html" class="RO">Contacto</a></button>
+  </div>
+	
+		<ul><li>
+
+
+	<div class="contenedor">
+
+		<div class="circle"></div>
+		<h1>REN</h1>
+		<H2>En San Pedro Garza Garcia,Nuevo Leon</H2>
+		Sucursal al Norte de Mexico <br>
+		<img src="imgp/estrellasmichelin.webp">
+		<div class="alas">
+			Sucursal en el Norte de Mexico; en esta sucursal ofrecemos los 3 platillos tipicos del Norte del país los cuales son:
+			<ul><br>
+				<li>Tortas de Camarón</li>
+				<li>Parrillada de Mariscos</li>
+				<li>Carne Asada</li>
+			</ul>
+			Esta sucursal tiene 3 Estrellas Michelin,Por su alta Calidad en los alimentos y servivios que ofrecemos en REN <br><br>
+			Esta sucursal se Encuentra en En el Norte  de Mexico En San Pedro Garza Garcia,Av.Diego Rivera 1000,Zona San Agustin, 66260 San Pedro Garza Garcia,N.L
+			Esta sucursal ofrece,Menú infantil El cual es:
+			<br>
+			<ul>
+				<br>
+				<li>Hamburguesas con papas</li>
+				<li>Tacos</li>
+				<li>Hot Dogs</li>
+				<li>Nuggets</li>
+				<br>
+				Esta Sucursal<br>
+				es PetFriendly<br>
+				Contamos con menu especial<br>
+				para las mascotas
+				<br><br>
+				REN es un Restaurante Ecologico
+				<br>
+				Nosotros ofrecemos cubiertos biodegradables <br>
+				y comestibles, tambien vendemos productos biodegradables <br>
+				como bolsas,pajillas,vasos,platos etc.
+			</ul>
+			<div class="pro">
+			<div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=Av.Diego+Rivera+1000%2CZona+San+Agustin%2C+66260+San+Pedro+Garza+Garcia%2CN.L.&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.analarmclock.com/">online alarm clock</a><br><a href="https://timenowin.net/"></a><br>
+				<style>.mapouter{position: relative;text-align: right;height: 250px;width: 300px;}</style>
+				<a href="https://www.embedmaps.co">google maps embed iframe</a>
+				<style>.gmap_canvas{overflow: hidden;background: none !important;height: 250px;width: 300px;}</style></div></div></div>
+		</div>
+
+	</div>
+	
+</li>
+<li>
+	<li><div class="contenedor">
+		<div class="circle1"></div>
+		<h1>REN</h1>
+		<H2>Ciudad de Mexico</H2>
+		Sucursal en el Centro de Mexico <br>
+		<img src="imgp/estrellasmichelin.webp">
+		<div class="alas">
+			Sucursal en el Centro de Mexico; en esta sucursal ofrecemos los 3 platillos tipicos del Centro del país los cuales son:
+			<ul><br>
+				<li>Chilaquiles</li>
+				<li>Tamales</li>
+				<li>Pozole</li>
+			</ul>
+			Esta sucursal tiene 3 Estrellas Michelin,Por su alta Calidad en los alimentos y servivios que ofrecemos en REN <br><br>
+			Esta sucursal se Encuentra en En el Centro de Mexico en CDMX,Av.Universad 1770,Romero de Terreros, Ciudad de Mexico CDMX
+			Esta sucursal ofrece,Menú infantil El cual es:
+			<br>
+			<ul>
+				<br>
+				<li>Hamburguesas con papas</li>
+				<li>Tacos</li>
+				<li>Hot Dogs</li>
+				<li>Nuggets</li>
+				<br>
+				Esta Sucursal<br>
+				es PetFriendly<br>
+				Contamos con menu especial<br>
+				para las mascotas
+				<br><br>
+				REN es un Restaurante Ecologico
+				<br>
+				Nosotros ofrecemos cubiertos biodegradables <br>
+				y comestibles, tambien vendemos productos biodegradables <br>
+				como bolsas,pajillas,vasos,platos etc.
+
+</li>
+			</ul>
+			<div class="pro">
+			<div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=Av.Universidad+1770+Romero+de+Terreros%2CCoyoacan%2C04310+Ciudad+de+Mexico%2CCdmx&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://textcaseconvert.com"></a><br><a href="https://www.calc-calc.com"></a><br><style>.mapouter{position: relative;text-align: right;height: 250px;width: 300px;}</style><a href="https://www.ongooglemaps.com">google maps html code</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 250px;width: 300px;}</style></div></div></div>
+</div>
+	<li><div class="contenedor">
+		<div class="circle2"></div>
+		<h1>REN</h1>
+		<H2>Merida Yucatan</H2>
+		Sucursal en el Sur de Mexico <br>
+		<img src="imgp/estrellasmichelin.webp">
+		<div class="alas">
+			Sucursal Sur de Mexico; en esta sucursal ofrecemos los 3 platillos tipicos del Sur del país los cuales son:
+			<ul><br>
+				<li>Pan de cason</li>
+				<li>Cochinita Pibil</li>
+				<li>Puchero Tabasqueño</li>
+			</ul>
+			Esta sucursal tiene 3 Estrellas Michelin,Por su alta Calidad en los alimentos y servivios que ofrecemos en REN <br><br>
+			Esta sucursal se Encuentra en En el Sur de Mexico en Merida Yucatan
+			Esta sucursal ofrece,Menú infantil El cual es: C. 60 346,Zona Paseo Monejo,Centro, 9700 Merids, Yuc
+			<br>
+			<ul>
+				<br>
+				<li>Hamburguesas con papas</li>
+				<li>Tacos</li>
+				<li>Hot Dogs</li>
+				<li>Nuggets</li>
+				<br>
+				Esta Sucursal<br>
+				es PetFriendly<br>
+				Contamos con menu especial<br>
+				para las mascotas
+				<br><br>
+				REN es un Restaurante Ecologico
+				<br>
+				Nosotros ofrecemos cubiertos biodegradables <br>
+				y comestibles, tambien vendemos productos biodegradables <br>
+				como bolsas,pajillas,vasos,platos etc.
+				</ul>
+				<div class="pro">
+<div class="mapouter"><div class="gmap_canvas"><iframe width="300" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=C.60+346%2CZona+Paseo+Montejo%2CCentro%2C9799+Merida%2CYuc.&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://textcaseconvert.com"></a><br><a href="https://www.calc-calc.com"></a><br><style>.mapouter{position: relative;text-align: right;height: 250px;width: 300px;}</style><a href="https://www.ongooglemaps.com">insert google map html</a><style>.gmap_canvas{overflow: hidden;background: none !important;height: 250px;width: 300px;}</style></div></div></div>
+		</div>
+	</div>
+	</div>
+
+</body>
+</html>
